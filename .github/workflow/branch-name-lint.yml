@@ -1,0 +1,42 @@
+name: Branch Name Lint
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, edited]
+
+permissions:
+  pull-requests: read
+
+jobs:
+  branch-name:
+    name: Validate branch name
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check PR head branch name
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          BRANCH="${{ github.head_ref }}"
+          echo "PR head branch: $BRANCH"
+
+          # 허용 패턴:
+          # - feature/<name>
+          # - fix/<name>
+          # - chore/<name>
+          #
+          # <name>는 소문자/숫자/._- 만 허용 (공백/대문자 등 금지)
+          PATTERN='^(feature|fix|chore)\/[a-z0-9._-]+$'
+
+          if [[ ! "$BRANCH" =~ $PATTERN ]]; then
+            echo "::error title=Invalid branch name::'$BRANCH' does not match the required pattern."
+            echo "Allowed examples:"
+            echo "  - feature/reading-share-link"
+            echo "  - fix/esv-rate-limit"
+            echo "  - chore/setup-ci"
+            echo ""
+            echo "Required pattern: (feature|fix|chore)/[a-z0-9._-]+"
+            exit 1
+          fi
+
+          echo "Branch name OK."
