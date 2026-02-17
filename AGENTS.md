@@ -107,6 +107,8 @@ PR must include:
 
 Keep PRs small and focused.
 
+If PR has a potential to leak any personal information(i.e., credentials), never push it.
+
 ---
 
 # 10. Design Philosophy
@@ -138,3 +140,10 @@ If a change affects:
 Add extra explanation in the PR.
 
 Security and license compliance are higher priority than convenience.
+
+
+---
+
+# 12. Documentation
+
+Also think of documentation. Ask if the change is documented somewhere. If the documentation is needed, add a documentation for the change. Especially, check README file. The file is for comprehensive guide for users. If the change affects user behavior, update the document

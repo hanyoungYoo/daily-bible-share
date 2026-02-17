@@ -1,0 +1,9 @@
+[project]
+name = "daily-bible-share"
+version = "0.1.0"
+description = "daily bible share application."
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "ruff>=0.15.1",
+]
