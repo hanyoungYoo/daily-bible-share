@@ -4,6 +4,21 @@ version = "0.1.0"
 description = "daily bible share application."
 readme = "README.md"
 requires-python = ">=3.14"
-dependencies = [
+
+[dependency-groups]
+dev = [
     "ruff>=0.15.1",
 ]
+
+[tool.ruff]
+target-version = "py314"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "C4", "RET", "ARG", "D", "ANN"]
+
+[tool.uv.workspace]
+members = [
+    "numbers",
+]
+
