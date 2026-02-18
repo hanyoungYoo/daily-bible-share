@@ -1,28 +1,63 @@
-## 📌 Summary
+## PR Title (Required)
 
-<!-- 이 PR에서 무엇을 변경했는지 3~5줄 이내로 설명하세요 -->
+<!--
+Squash merge를 사용하므로 PR 제목이 main 브랜치의 최종 커밋 메시지가 됩니다.
+아래 규칙을 반드시 지켜주세요 (PR title lint와 동일).
+-->
+
+Format:
+`<type>(<scope>): <subject>`
+
+- `type`: `feat`, `fix`, `refactor`, `docs`, `test`, `chore`
+- `scope`: `core`, `setup`, `auth`, `ci`, `docs`, `infra`, `backend`, `frontend`
+- `subject`: 1~72자, 명확하고 간결하게
+- Breaking change가 있으면 `!` 사용 가능:
+  `feat(core)!: drop legacy token format`
+
+Examples:
+- ✅ `fix(auth): reject expired share token`
+- ✅ `docs(ci): add PR title examples`
+- ❌ `fix: no scope`
+- ❌ `feature(auth): wrong type`
+- ❌ `fix(auth): this subject is intentionally made far too long to exceed the seventy two character lint rule limit`
 
 ---
 
-## 🧪 How to Test
+## Summary
 
-<!-- 로컬에서 어떻게 테스트했는지 작성하세요 -->
-<!-- 예: make test / docker compose up 후 /api/readings 호출 -->
+<!-- 이 PR에서 무엇을 왜 변경했는지 3~5줄로 작성하세요 -->
+
+---
+
+## Addition (AI Agent Required)
+
+<!--
+AI agent가 아래 3개 섹션을 반드시 채워야 합니다.
+- How to Test
+- Focus for Review
+- Manual Checks
+-->
+
+### How to Test
 
 1.
 2.
 3.
 
----
+<!-- 실행 가능한 테스트가 없다면 이유를 반드시 작성하세요. -->
 
-## 🔍 Focus for Review(optional)
+### Focus for Review
 
-<!-- 리뷰어가 집중해서 봐야 할 부분 -->
-<!-- 예: share token 생성 로직, permission 체크 등 -->
+<!-- 리뷰어가 집중해서 볼 포인트를 작성하세요. -->
+<!-- 특별히 없으면 N/A: <reason> 형식으로 작성하세요. -->
 
----
+### Manual Checks
 
-## Manual Checks (only if relevant)
-- [ ] DB migration 영향 있음 (운영 리스크/롤백 방식 간단히 적기)
-- [ ] 권한/보안 관련 변경 있음 (접근 범위가 바뀌었는지)
-- [ ] 외부 API/라이선스 관련 변경 있음 (ESV 표기/호출/캐시 정책)
+<!-- 각 항목은 Yes/No 중 하나를 반드시 체크하세요. -->
+
+- [ ] DB migration: Yes (Summary에 운영 리스크/롤백 방식 작성)
+- [ ] DB migration: No
+- [ ] Security/Permission change: Yes (Summary에 접근 범위 변화 작성)
+- [ ] Security/Permission change: No
+- [ ] External API/License change: Yes (Summary에 ESV 표기/호출/캐시 정책 작성)
+- [ ] External API/License change: No

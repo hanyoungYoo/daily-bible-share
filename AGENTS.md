@@ -111,6 +111,12 @@ PR must include:
   - Migration impact
   - License impact
 
+AI agents must fill `Addition (AI Agent Required)` section in `.github/pull_request_template.md`:
+
+- `How to Test`
+- `Focus for Review`
+- `Manual Checks` (choose Yes/No for each item)
+
 Keep PRs small and focused.
 
 If PR has a potential to leak any personal information(i.e., credentials), never push it.

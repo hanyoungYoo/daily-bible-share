@@ -1,0 +1,12 @@
+# Commit title format (same as PR title lint / squash-merge final commit title):
+# <type>(<scope>): <subject>
+#
+# type: feat | fix | refactor | docs | test | chore
+# scope: core | setup | auth | ci | docs | infra | backend | frontend
+# subject: 1-72 chars, clear and concise
+# breaking change: use ! (example: feat(core)!: drop legacy token format)
+#
+# Examples:
+# fix(auth): reject expired share token
+# docs(ci): add PR title examples
+

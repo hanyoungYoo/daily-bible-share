@@ -43,3 +43,17 @@ Auto-fix and format:
 uv run ruff check . --fix
 uv run ruff format .
 ```
+
+## Commit Message Template
+
+This repository provides `.gitmessage` with the same title format as PR title lint:
+
+`<type>(<scope>): <subject>`
+
+Set it once in this repo:
+
+```bash
+git config commit.template .gitmessage
+```
+
+Then `git commit` will open with the format guidance.
