@@ -1,4 +1,8 @@
-def main():
+"""Project CLI entrypoint."""
+
+
+def main() -> None:
+    """Print a placeholder startup message."""
     print("Hello from daily-bible-share!")
 
 

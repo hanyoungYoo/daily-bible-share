@@ -4,6 +4,10 @@ version = "0.1.0"
 description = "daily bible share application."
 readme = "README.md"
 requires-python = ">=3.14"
+dependencies = [
+    "fastapi>=0.116.1",
+    "uvicorn[standard]>=0.35.0",
+]
 
 [dependency-groups]
 dev = [
@@ -16,9 +20,3 @@ line-length = 120
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP", "SIM", "C4", "RET", "ARG", "D", "ANN"]
-
-[tool.uv.workspace]
-members = [
-    "numbers",
-]
-
