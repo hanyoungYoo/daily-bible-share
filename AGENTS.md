@@ -15,6 +15,12 @@ PR titles must follow Conventional Commits - check .github/pull_request_template
 
 ---
 
+# 2. Code change rules.
+
+- Always ask user for an approval when there's a code change
+- Commit and PR request will always be done by user.
+
+
 # 3. Code Quality Rules
 
 Before submitting changes, ensure:
